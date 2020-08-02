@@ -1,0 +1,233 @@
+{
+    "Parameters": {
+        "IdentityServerCertificateName": {
+            "Type": "String",
+            "Description": "The name of the certificate to be created for the identity server.",
+            "DefaultValue": ""
+        },
+        "IdentityServerSiteName": {
+            "Type": "String",
+            "Description": "The name of the identity server to be created.",
+            "DefaultValue": "IdentityServer"
+        },
+        "LicenseFile": {
+            "Type": "String",
+            "Description": "The path to the Sitecore license file.",
+            "DefaultValue": ".\\License.xml"
+        },
+        "Prefix": {
+            "Type": "String",
+            "DefaultValue": "SC910",
+            "Description": "The prefix for uniquely identifying instances."
+        },
+        "SitePhysicalRoot": {
+            "Type": "String",
+            "Description": "Root folder to install the site to. If left on the default [systemdrive]:\\inetpub\\wwwroot will be used.",
+            "DefaultValue": ""
+        },
+        "SqlAdminUser": {
+            "Type": "string",
+            "DefaultValue": "sa",
+            "Description": "The Sql admin user account to use when installing databases."
+        },
+        "SqlAdminPassword": {
+            "Type": "string",
+            "DefaultValue": "12345",
+            "Description": "The Sql admin password to use when installing databases."
+        },
+        "SQLServer": {
+            "Type": "String",
+            "DefaultValue": "Localhost",
+            "Description": "The Sql Server where databases will be installed."
+        },
+        "SqlSecurityPassword": {
+            "Type": "string",
+            "DefaultValue": "SIF-Default",
+            "Description": "The Sql password for the Security connection string in Sitecore."
+        },
+        "PasswordRecoveryUrl": {
+            "Type": "string",
+            "Description": "Password recovery Url (Host name of CM instance).",
+            "DefaultValue": "https:\\Sitecore"
+        },
+        "IdentityServerPackage": {
+            "Type": "String",
+            "DefaultValue": "",
+            "Description": "The path to the Identity Server package to deploy."
+        },
+        "ClientsConfiguration": {
+            "Type": "string",
+            "DefaultValue": "",
+            "Description": "Sitecore IdentityServer clients configuration"
+        },
+        "AllowedCorsOrigins": {
+            "Type": "string",
+            "Description": "Pipe-separated list of instances (URIs) that are allowed to login via Sitecore Identity.",
+            "DefaultValue": ""
+        },
+        "SitecoreIdentityAuthority": {
+            "Type": "string",
+            "DefaultValue": "https://SitecoreIdentityServerHost",
+            "Description": "IdentityServer provider URI."
+        },
+        "ClientSecret": {
+            "Type": "string",
+            "Description": "Client secret of PasswordClient section. It's a random string between 1 and 100 symbols long.",
+            "DefaultValue": "SIF-Default"
+        },
+        "PackagesTempLocation": {
+            "Type": "String",
+            "Description": "Alternative location to save WDP packages. If left on the default $Env:Temp will be used.",
+            "DefaultValue": ""
+        },
+        "DownloadLocations": {
+            "Type": "String",
+            "Description": "File with URI and SHA256 hashes of dynamically downloadable WDPs.",
+            "DefaultValue": ".\\downloads.json"
+        },
+        "SqlSecurityUser": {
+            "Type": "String",
+            "Description": "sql security username for client identity server",
+            "DefaultValue": "clientsecurityuser"
+        },
+        "IdentityServer:Package": {
+            "Type": "String",
+            "Reference": "IdentityServerPackage",
+            "Description": "Override to pass IdentityServerPackage value to IdentityServer config."
+        },
+        "IdentityServer:SitePhysicalRoot": {
+            "Type": "String",
+            "Reference": "SitePhysicalRoot",
+            "Description": "Override to pass SitePhysicalRoot value to IdentityServer config."
+        },
+        "IdentityServer:PasswordRecoveryUrl": {
+            "Type": "String",
+            "Reference": "PasswordRecoveryUrl",
+            "Description": "Override to pass PasswordRecoveryUrl value to IdentityServer config."
+        },
+        "IdentityServer:ClientsConfiguration": {
+            "Type": "String",
+            "Reference": "ClientsConfiguration",
+            "Description": "Override to pass ClientsConfiguration value to IdentityServer config."
+        },
+        "IdentityServer:SqlServer": {
+            "Type": "String",
+            "Reference": "SQLServer",
+            "Description": "Override to pass SqlServer value to IdentityServer config."
+        },
+        "IdentityServer:SqlSecurityUser": {
+            "Type": "String",
+            "Reference": "SqlSecurityUser",
+            "Description": "Override to pass SqlServer value to IdentityServer config."
+        },        
+        "IdentityServer:SqlDbPrefix": {
+            "Type": "String",
+            "Reference": "Prefix",
+            "Description": "Override to pass Prefix value to IdentityServer config."
+        },
+        "IdentityServerCertificates:CertificateName": {
+            "Type": "String",
+            "Reference": "IdentityServerCertificateName",
+            "Description": "Override to pass IdentityServerCertificateName value to IdentityServerCertificates config."
+        },
+        "IdentityServer:SiteName": {
+            "Type": "String",
+            "Reference": "IdentityServerSiteName",
+            "Description": "Override to pass IdentityServerSiteName value to IdentityServer config."
+        },
+        "IdentityServer:SitecoreIdentityCert": {
+            "Type": "String",
+            "Reference": "IdentityServerCertificateName",
+            "Description": "Override to pass IdentityServerCertificateName value to IdentityServer config."
+        },
+        "IdentityServer:LicenseFile": {
+            "Type": "String",
+            "Reference": "LicenseFile",
+            "Description": "Override to pass LicenseFile value to IdentityServer config."
+        },
+        "IdentityServer:AllowedCorsOrigins": {
+            "Type": "String",
+            "Reference": "AllowedCorsOrigins",
+            "Description": "Override to pass AllowedCorsOrigins value to IdentityServer config."
+        },
+		"SitecoreCDSiteName": {
+            "Type": "String",
+            "DefaultValue": "SitecoreCD",
+            "Description": "The name of the Sitecore CD site."
+        },       
+        "IdentityServer:PackagesTempLocation": {
+            "Type": "String",
+            "Reference": "PackagesTempLocation",
+            "Description": "Override to pass PackagesTempLocation value to IdentityServer config."
+        },
+        "IdentityServer:DownloadLocations": {
+            "Type": "String",
+            "Reference": "DownloadLocations",
+            "Description": "Override to pass DownloadLocations value to IdentityServer config."
+        },
+        "SecurityUserScriptPath" :{
+            "Type": "String",
+            "Description": "Script Path for creating the security user for client",
+            "DefaultValue": ""
+        }
+    },
+    "Variables": {
+
+        "SqlSecurity.Password": "[if(variable('Test.SqlSecurity.Password'),variable('Generate.SqlSecurity.Password'),parameter('SqlSecurityPassword'))]",
+        "IdentityServer:Sql.Database.Password": "[variable('SqlSecurity.Password')]",
+        "Test.SqlSecurity.Password": "[equal(parameter('SqlSecurityPassword'),'SIF-Default')]",
+        "Generate.SqlSecurity.Password": "[randomstring(Length:20,DisAllowSpecial:True,EnforceComplexity:True)]",
+
+        "Client.Secret" : "[if(variable('Test.Client.Secret'),variable('Generate.Client.Secret'),parameter('ClientSecret'))]",
+        "IdentityServer:Client.Secret": "[variable('Client.Secret')]",
+        "Test.Client.Secret": "[equal(parameter('ClientSecret'),'SIF-Default')]",
+        "Generate.Client.Secret": "[randomstring(Length:100,DisAllowSpecial:True)]",
+
+        "SecurityUser.Script.Variable1": "[concat('username=\"',parameter('SqlSecurityUser'), '\"')]",
+        "SecurityUser.Script.Variable2": "[concat('sqlpassword=\"',variable('SqlSecurity.Password'), '\"')]",
+        "Security.Database.Name": "[concat(parameter('Prefix'), '_core')]"
+    },
+    "Includes": {
+        "IdentityServerCertificates":{
+            "Source": ".\\createcert.json"
+        },
+        "IdentityServer": {
+            "Source": ".\\identityServer.json"
+        }
+    },
+    "Register": {
+        "Tasks": {
+            "SetVariable": "Set-Variable",
+            "InvokeSQL" : "Invoke-Sqlcmd"
+        }
+    },
+    "Tasks": {
+        "GeneratePasswords": {
+            "Description": "Generates all shared passwords and secrets.",
+            "Type": "SetVariable",
+            "Params": {
+                "Name": "XP0Passwords",
+                "Scope": "Global",
+                "Value": [
+                    {"SqlSecurityPassword":            "[variable('SqlSecurity.Password')]"},
+                    {"ClientSecret":                   "[variable('Client.Secret')]"}
+                ]
+            }
+        },
+        "CreateSecurityUser": {
+            "Description": "Creates the client security user",
+            "Type": "InvokeSQL",
+            "Params":{
+                "InputFile": "[parameter('SecurityUserScriptPath')]",
+                "Variable": [
+                    "[variable('SecurityUser.Script.Variable1')]",
+                    "[variable('SecurityUser.Script.Variable2')]"
+                ],
+                "ServerInstance": "[parameter('SQLServer')]",
+                "Database": "[variable('Security.Database.Name')]",
+                "Username":"[parameter('SqlAdminUser')]",
+                "Password": "[parameter('SQLAdminPassword')]"
+            }
+        }
+    }
+}
