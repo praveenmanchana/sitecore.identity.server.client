@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<sitecore>
+  <phrase key="User Name" source="Sitecore.Plugin.IdentityServer.Texts">
+    <en>Member Username</en>
+  </phrase>
+</sitecore>
